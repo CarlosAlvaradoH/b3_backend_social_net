@@ -8,7 +8,7 @@ const PublicationSchema = Schema ({
         required: true
     },
     text: {
-        tyoe: String,
+        type: String,
         required: true
     },
     file: String,
@@ -21,29 +21,3 @@ const PublicationSchema = Schema ({
 PublicationSchema.plugin(mongoosePaginate);
 
 export default model("Publication", PublicationSchema, "publications");
-
-
-// import { Schema, model } from "mongoose";
-// import mongoosePaginate from "mongoose-paginate-v2";
-
-// const PublicationSchema = Schema({
-//   user_id: {
-//     type: Schema.ObjectId,
-//     ref: "User",
-//     required: true
-//   },
-//   text: {
-//     type: String,
-//     required: true
-//   },
-//   file: String,
-//   created_at: {
-//     type: Date,
-//     default: Date.now
-//   }
-// });
-
-// // Configurar plugin de paginación
-// PublicationSchema.plugin(mongoosePaginate);
-
-// export default model("Publication", PublicationSchema, "publications");
