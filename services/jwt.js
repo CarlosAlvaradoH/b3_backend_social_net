@@ -2,7 +2,7 @@ import jwt from "jwt-simple";
 import moment from "moment";
 
 //Clave secreta para poder generar le token
-const secret = "CL4V3_S3CR3T4_R3D_S0C14L";
+const secret = process.env.SECRET_KEY;
 
 //Metodo para generar tokens
 const createToken = (user) => {
