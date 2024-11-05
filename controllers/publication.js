@@ -61,7 +61,7 @@ export const showPublication = async (req, res) => {
 
         // Buscar la publicacion en la base de datos
         const publicationStored = await Publication.findById(publicationId)
-        .populate('user_id', 'name last_name');
+        .populate('user_id', 'name last_name nick image');
 
         // Verificar si existe la publicacion
         if(!publicationStored){
